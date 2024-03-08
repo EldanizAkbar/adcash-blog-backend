@@ -1,9 +1,7 @@
 import os
-from pathlib import Path
-import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -74,20 +72,13 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'adcash_blog',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'localhost',
-        'PORT': '5432',
+         'ENGINE': 'django.db.backends.postgresql',
+         'NAME': os.path.join(BASE_DIR, 'db.postgresql'),
     }
 }
-
-# Update DATABASES to use dj_database_url for Heroku
-prod_db = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
 
 
 # Password validation
