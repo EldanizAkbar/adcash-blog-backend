@@ -15,7 +15,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', 'stark-mountain-97075-931483a868a1.herokuapp.com']
 
-# Application definition
+CORS_ALLOWED_ORIGINS = [
+    "https://adcash-blog.vercel.app/",
+    # Add other allowed origins as needed
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
