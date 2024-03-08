@@ -3,21 +3,16 @@ import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-e75(wuej^#7mk%_fid-y0@*%n7*kd1f%lfm&@vpwl57-og_b-x'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', 'stark-mountain-97075-931483a868a1.herokuapp.com']
 
 CORS_ALLOWED_ORIGINS = [
     "https://adcash-blog.vercel.app/",
-    # Add other allowed origins as needed
+    "http://localhost:5173",
+    
 ]
 
 INSTALLED_APPS = [
@@ -45,7 +40,6 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_METHODS = True
 
-# Allow specific headers
 CORS_ALLOW_HEADERS = [
     'content-type',
     'authorization',
@@ -73,9 +67,6 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES = {
     'default': db_from_env
@@ -83,7 +74,6 @@ DATABASES = {
 
 
 # Password validation
-# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -102,7 +92,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/5.0/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
@@ -114,11 +103,7 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.0/howto/static-files/
-
 STATIC_URL = '/static/'
 
 # Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
