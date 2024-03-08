@@ -76,6 +76,20 @@ To run the unit tests for the API:
 - Django REST framework
 - PostgreSQL
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://mit-license.org/) file for details.
+
+
+## Acknowledgements
+
+This project was created as a part of the Adcash internship program.
+
+
+
+
+
+
 
 
 
