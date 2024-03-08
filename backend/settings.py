@@ -59,7 +59,10 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Update DATABASES to use dj_database_url for Heroku
 prod_db = dj_database_url.config(conn_max_age=500)
 DATABASES = {
-    'default': prod_db
+    'default': {
+        **prod_db,
+        'ENGINE': 'django.db.backends.postgresql'
+    }
 }
 
 # Password validation, language, time zone, etc. (unchanged)
