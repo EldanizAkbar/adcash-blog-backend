@@ -2,6 +2,10 @@
 
 Welcome to the Adcash Blog Backend repository! This project contains the backend code for a simple blog website built with Django. The API allows users to manage categories and posts for the blog.
 
+## Demo link - [Adcash Blog Website](https://adcash-blog.vercel.app/)
+
+## Project Front-end - [Adcash Blog Front-End](https://github.com/EldanizAkbar/adcash-blog-frontend)
+
 ## Features
 
 - CRUD operations for categories (Create, Read, Update)
@@ -47,7 +51,6 @@ Welcome to the Adcash Blog Backend repository! This project contains the backend
    python manage.py runserver
 
 
-
 ## API Endpoints
 
 - ```GET /api/categories/:```  Get a list of all categories.
@@ -58,7 +61,7 @@ Welcome to the Adcash Blog Backend repository! This project contains the backend
 - ```PUT /api/posts/<int:pk>/:``` Update details of a specific post by ID. (Requires title, content, and categories fields in the request body)
 - ```DELETE /api/posts/<int:pk>/:``` Delete a specific post by ID.
 
-##Testing
+## Testing
 
 To run the unit tests for the API:
 
@@ -66,7 +69,7 @@ To run the unit tests for the API:
  python manage.py test
 ```
 
-#Technologies Used
+## Technologies Used
 
 - Python
 - Django
