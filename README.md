@@ -4,7 +4,7 @@ Welcome to the Adcash Blog Backend repository! This project contains the backend
 
 ## Features
 
-- CRUD operations for categories (Create, Read, Update, Delete)
+- CRUD operations for categories (Create, Read, Update)
 - CRUD operations for posts (Create, Read, Update, Delete)
 - Retrieve lists of categories and posts
 - Filter posts by categories
@@ -51,13 +51,13 @@ Welcome to the Adcash Blog Backend repository! This project contains the backend
 ## API Endpoints
 
 - ```GET /api/categories/:```  Get a list of all categories.
-- GET /api/categories/: Get a list of all categories.
-- POST /api/categories/: Create a new category. (Requires name field in the request body)
-- GET /api/posts/: Get a list of all posts.
-- POST /api/posts/: Create a new post. (Requires title, content, and categories fields in the request body)
-- GET /api/posts/<int:pk>/: Get details of a specific post by ID.
-- PUT /api/posts/<int:pk>/: Update details of a specific post by ID. (Requires title, content, and categories fields in the request body)
-- DELETE /api/posts/<int:pk>/: Delete a specific post by ID.
+- ```GET /api/categories/:``` Get a list of all categories.
+- ```POST /api/categories/:``` Create a new category. (Requires name field in the request body)
+- ```GET /api/posts/:``` Get a list of all posts.
+- ```POST /api/posts/:``` Create a new post. (Requires title, content, and categories fields in the request body)
+- ```GET /api/posts/<int:pk>/:``` Get details of a specific post by ID.
+- ```PUT /api/posts/<int:pk>/:``` Update details of a specific post by ID. (Requires title, content, and categories fields in the request body)
+- ```DELETE /api/posts/<int:pk>/:``` Delete a specific post by ID.
 
 
 
