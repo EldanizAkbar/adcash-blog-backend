@@ -51,13 +51,27 @@ Welcome to the Adcash Blog Backend repository! This project contains the backend
 ## API Endpoints
 
 - ```GET /api/categories/:```  Get a list of all categories.
-- ```GET /api/categories/:``` Get a list of all categories.
 - ```POST /api/categories/:``` Create a new category. (Requires name field in the request body)
 - ```GET /api/posts/:``` Get a list of all posts.
 - ```POST /api/posts/:``` Create a new post. (Requires title, content, and categories fields in the request body)
 - ```GET /api/posts/<int:pk>/:``` Get details of a specific post by ID.
 - ```PUT /api/posts/<int:pk>/:``` Update details of a specific post by ID. (Requires title, content, and categories fields in the request body)
 - ```DELETE /api/posts/<int:pk>/:``` Delete a specific post by ID.
+
+##Testing
+
+To run the unit tests for the API:
+
+ ```bash
+ python manage.py test
+```
+
+#Technologies Used
+
+- Python
+- Django
+- Django REST framework
+- PostgreSQL
 
 
 
